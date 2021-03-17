@@ -6,7 +6,8 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = build
+BUILDDIR      = _build
+CURRENT_DIR = $(shell pwd)
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -25,4 +26,4 @@ clean:
 reinstall: clean html
 
 view:
-	@open -a "Google Chrome" $(pwd)/$(BUILDDIR)/html/index.html
+	@google-chrome  file:///$(CURRENT_DIR)/$(BUILDDIR)/html/index.html

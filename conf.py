@@ -12,12 +12,13 @@
 
 import os
 import sys
+from recommonmark.parser import CommonMarkParser
 sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentação'
+project = 'tb-brics-documentation'
 copyright = '2021, André Pereira'
 author = 'André Pereira'
 
@@ -36,13 +37,12 @@ extensions = [
     'sphinx.ext.autodoc', 
     'sphinx.ext.coverage', 
     'sphinx.ext.napoleon', 
-    "sphinx_rtd_theme"
+    'sphinx_rtd_theme',
 ]
 
+source_parsers = {'.md': CommonMarkParser}
+
 source_suffix = ['.rst', '.md']
-source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
-}
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -51,7 +51,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'Projeto_Anete_Trajman.md']
 
 
 # -- Options for HTML output -------------------------------------------------
