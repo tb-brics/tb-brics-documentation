@@ -130,6 +130,3 @@ dmypy.json
 
 # pycharm configuration
 .idea/
-
-# removendo arquivos html da documentação
-_build/
