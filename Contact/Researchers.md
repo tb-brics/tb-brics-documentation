@@ -3,7 +3,7 @@
 
 Anete Trajman
 
-Joel Manoel Seixas
+José Manoel Seixas
 
 Keertan Dheda
 
