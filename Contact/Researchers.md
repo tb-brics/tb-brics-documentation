@@ -1,6 +1,5 @@
 # Researchers
 
-## Dentro do pdf:
 
 Anete Trajman
 
@@ -23,6 +22,8 @@ Kevin Schwatrzman
 Antonio Mauricio Ferreira Leite Miranda de Sá
 
 Frederico Caetano Jandre de Assis Tavares
+
+...
 
 
 
