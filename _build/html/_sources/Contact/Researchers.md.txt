@@ -1,10 +1,9 @@
 # Researchers
 
-## Dentro do pdf:
 
 Anete Trajman
 
-Joel Manoel Seixas
+José Manoel Seixas
 
 Keertan Dheda
 
@@ -23,6 +22,8 @@ Kevin Schwatrzman
 Antonio Mauricio Ferreira Leite Miranda de Sá
 
 Frederico Caetano Jandre de Assis Tavares
+
+...
 
 
 

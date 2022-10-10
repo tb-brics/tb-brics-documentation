@@ -81,11 +81,13 @@ You can learn how to install and use them by clicking on the respective directiv
 * ImageService_
 * ImageSampling_
 * POP_
+* Reproducibility Tools
   
 .. _DataReader: ./Directives/DataReader.html
 .. _ImageService: ./Directives/ImageService.html
 .. _ImageSampling: ./Directives/ImageSampling.html
 .. _POP: ./Directives/POP.html
+.. _Reproducibility Tools: ./Directives/Reproducibility Tools.html
 
 .. toctree::
    :maxdepth: 1
@@ -96,6 +98,7 @@ You can learn how to install and use them by clicking on the respective directiv
    ./Directives/ImageService
    ./Directives/ImageSampling
    ./Directives/POP
+   ./Directives/Reproducibility Tools
 
 .. toctree::
    :maxdepth: 1

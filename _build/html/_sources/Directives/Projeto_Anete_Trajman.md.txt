@@ -56,7 +56,7 @@ Estima-se que 23% da população mundial tem ILTB.6 Este contingente de cerca de
 
 As estratégias para o controle da epidemia de TB compreendem a redução da infecção ou o adoecimento de quem já adquiriu a infecção, por meio (1) da melhoria das condições de vida, i.e., menos aglomeração e pobreza, (2) da detecção e tratamento precoce dos doentes, (3) das vacinas que impeçam a transmissão, que ainda não existem, (4) do tratamento da imunodepressão (mas pessoas com imunodepressão são apenas um pequeno contingente dos 56 milhões de pessoas com infecção recente e alto risco de adoecimento), ou (5) do tratamento da infecção latente (TPT). O efeito de cada uma dessas estratégias na endemia foi avaliado em modelos matemáticos.5 A estratégia mais eficaz isoladamente é o TPT, como se vê na Figura 1, linha azul. O amplo tratamento oportuno das formas latente e ativa da TB permitem, de acordo com este modelo, atingir as metas de eliminação da TB. 
 
-![](Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.001.png)
+![](./images/Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.001.png)
 
 Figura 1: Efeito de diferentes estratégias na endemia global de tuberculose.5 
 
@@ -66,7 +66,7 @@ Esta não é uma tarefa fácil: em 2018, o TPT foi iniciado em 1,8 milhões de P
 
 As maiores perdas são na etapa inicial de identificação, quase 30% das pessoas que deveriam ser rastreadas não fazem nenhum teste.8 Seguem-se as etapas do diagnóstico, que incluem a confirmação da infecção e a exclusão da doença ativa. Nestas etapas somam-se mais perdas. Por fim, as últimas etapas da cascata compreendem a prescrição, aceitação e adesão ao tratamento, com perdas adicionais (Figura 2).  
 
-![](Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.002.png)
+![](./images/Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.002.png)
 
 Figura 2: Cascata do cuidado da ILTB, com perdas nas diferentes etapas.8 
 

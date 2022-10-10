@@ -40,7 +40,7 @@ It is estimated that 23% of the world population has ILTB. This contingent of ab
 
 Strategies for controlling the TB epidemic include reducing the infection or making people who have acquired the disease, by (1) improving living conditions, that is, less crowding and poverty, (2) detecting and early treatment of patients, (3) vaccines that prevent transmission, which do not yet exist, (4) treatment of immunosuppression (but people with immunosuppression are only a small contingent of the 56 million people with recent infection and high risk of illness ), or (5) the treatment of latent infection (TPT). The effect of each of these strategies on the endemic was assessed in mathematical models.5 A more effective strategy in isolation is TPT, as shown in Figure 1, blue line. The broad timely treatment of the latent and active forms of TB allows, according to this model, to achieve the goals of TB elimination.
 
-![](Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.001.png)
+![](./images/Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.001.png)
 
 Figure 1: Effect of different strategies on the global tuberculosis endemic.5 
 
@@ -50,7 +50,7 @@ This is not an easy task: in 2018, TPT was initiated at 1.8 million PLWH, compar
 
 The greatest losses are in the initial identification stage, almost 30% of the people who should be screened do not undergo any tests.8 Following are the diagnostic steps, which include confirmation of the infection and exclusion of the active disease. In these stages, more losses are added. Finally, the last stages of the cascade comprise prescription, acceptance, and adherence to treatment, with additional losses (Figure 2). 
 
-![](Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.002.png)
+![](./images/Aspose.Words.8ebcaaf7-d2bb-42e5-99f1-27dfd220324b.002.png)
 
 Figure 2: Cascade of care of ILTB, with losses in different stages.8 
 
