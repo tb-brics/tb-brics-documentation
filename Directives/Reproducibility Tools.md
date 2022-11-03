@@ -32,8 +32,9 @@ I pushed a docker image to my docker hub (it can be used  for a while, but this 
 Once inside a LPS machine, execute:
 
 ```
-Esperando o lps voltar ao ar para colocar o comando aqui
+singularity exec docker://andrefpereira/tb_brics:0.6 bash
 ``` 
+This will execute the docker container, with singularity, countaining some importants libraries, like tensorflow and scikit learn, that had some problems to execute with the standards libraries versions. If you need an additional library you can install inside of this container.  
 
 ## Mlflow
 
