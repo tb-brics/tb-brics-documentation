@@ -14,7 +14,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -85,18 +87,18 @@
            <div itemprop="articleBody">
              
   <section id="image-service">
-<h1>Image Service<a class="headerlink" href="#image-service" title="Permalink to this headline"></a></h1>
+<h1>Image Service<a class="headerlink" href="#image-service" title="Permalink to this heading"></a></h1>
 <p>X-ray Image web service for managing x-ray databases,exporting the TB tagged images for machine learning related activities.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline"></a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
 <p>You must have Docker Desktop installed to run this application in your computer.</p>
 </section>
 <section id="webserver">
-<h2>Webserver<a class="headerlink" href="#webserver" title="Permalink to this headline"></a></h2>
+<h2>Webserver<a class="headerlink" href="#webserver" title="Permalink to this heading"></a></h2>
 <p>The image service builds the data base  that will be filled with the data from multiple datasets, and them rearrange and display them to users in a more accessible way.</p>
 </section>
 <section id="running-the-web-service">
-<h2>Running the Web Service<a class="headerlink" href="#running-the-web-service" title="Permalink to this headline"></a></h2>
+<h2>Running the Web Service<a class="headerlink" href="#running-the-web-service" title="Permalink to this heading"></a></h2>
 <p>In your terminal, type the commands bellow to create the database structure. After cloning this repository, via command line, cd into the project root folder and start the containers by running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">dorothy</span><span class="o">-</span><span class="n">image</span><span class="o">-</span><span class="n">servic</span><span class="o">/</span><span class="n">webserver</span><span class="o">/</span><span class="n">django</span>
 <span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
@@ -115,7 +117,7 @@
 </div>
 </section>
 <section id="setting-up-the-aplication">
-<h2>Setting Up The Aplication<a class="headerlink" href="#setting-up-the-aplication" title="Permalink to this headline"></a></h2>
+<h2>Setting Up The Aplication<a class="headerlink" href="#setting-up-the-aplication" title="Permalink to this heading"></a></h2>
 <p>Now, exit the container, going back to the regular terminal, still on the dorothy-image-service/webserver/django folder.
 Assuming that you have already the datasets downloaded in your computer, follow the steps to load the data and them be able to access it in the API.</p>
 <ol>

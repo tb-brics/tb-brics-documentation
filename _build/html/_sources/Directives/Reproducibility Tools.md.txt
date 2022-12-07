@@ -2,38 +2,49 @@
 
 This section is reserved to teach how to use the reproducibility tools of the project.
 
+## Reproducibility-Env
+
+It was created a repository called "Reproducibility-Env" that serves as a template for projects reproducibility. The repository is in [https://github.com/tb-brics/Reproducibility-Env](https://github.com/tb-brics/Reproducibility-Env).
+
+Besides the README presented in the repository, it was recorded a handzone tutorial for explaining the process. This tutorial has 6 videos explaining: how to dockerize your project from the template; how build and run a Luigi pipeline; how to use Mlflow; how to run your project in LPS, with the template, using singularity; and it is presented the two Luigi Tasks developed to download datasets from Dorothy and to download the folds relations standard for cross validation. Link: [https://loom.com/invite/5811303ebabf4408853f8c6060a6f955](https://loom.com/invite/5811303ebabf4408853f8c6060a6f955) 
+
 ## Luigi
 
 ![Luigi Logo](./images/luigi_logo.png "Luigi")
 
-Luigi is a pipeline framework that is intended to standardize the machine learning codes, make them more intuitive, contributive among team members, and prepared for execution, that is the core of the reproducibility concepts.
+Luigi is a pipeline framework that is intended to standardize the machine learning codes, make them more intuitive, contributive among team members, and let codes ready to execute, that is the core of the reproducibility concepts.
 
-### How to use
-I made a video of how to build Luigi pipelines from jupyter notebook codes, it can be accessed below.
-
-For more information about luigi, access 
+In the video 3 is explained how to use Luigi. For more information, access
 [Luigi docs](https://luigi.readthedocs.io/en/stable/). 
 
+### Download Dataset and GetFolds Task
+
+Download Dataset task is used for download dataset from Dorothy to your machine and keep it updated with the Dorothy version. It is used in the beggining of your code for ensuring you are using the correct data. Anytime you run it, Luigi only will execute the download if it doesn't exist in your computer, or if it has a different version. It checks the version checking all files inside it.
+
+GetFolds task is used for downloading the folds relations of the dataset specified for develop the cross validation. This task was developed because of the project standard for cross validation, that is to use 90 folds. So, a pickle file containing lists of lists is on Dorothy, each list is a fold containing all images inside it. This task downloads this relation and change the image name for the image local path in your computer.  
 
 ## Accessing LPS with singularity
 
-It is very important to execute all experiments in a conteinerized way. But, LPS doesn't execute docker. Instead, it uses singularity to manage containers. So, for execute any code in LPS, we will first access a singularity container, created by you or the template created by me.
+LPS doesn't use docker to create and run containers, instead, it uses singularity. However, singularity allows building singularity image from docker image, turning the Dockerfile generalized for any machine, including LPS. Reproducibility-Env makes easy to do this conversion concentrating the commands needed in the "Makefile LPS" file. 
 
-I pushed a docker image to my docker hub (it can be used  for a while, but this image must stay in tb_brics docker hub) that contains the usual libraries (tensorflow, scikit-learn, ...) working in LPS.
+The steps for running singularity container in LPS are:
 
-<br>
-
->**NOTE:** As LPS doesn't have AVX-512, it was necessary to install an specific version of tensorflow, for an example. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries.
-
-<br>
-
-### Commands:
-
-Once inside a LPS machine, execute:
-
+1º - Execute the command 
 ```
-Esperando o lps voltar ao ar para colocar o comando aqui
+make push
 ``` 
+in the machine you have build your docker image. It will push it to your Docker Hub. It is necessary to change the "DOCKER_HUB_USERNAME" variable, presented in the Makefile, to your docker hub username.
+
+2º - Once pushed, access LPS and rename "Makefile" file to anything else, and rename "Makefile LPS" file to "Makefile". Now run 
+```
+make pull-start 
+```
+It will build and run a singularity image from the docker image in your Docker Hub.
+After that you will be inside your container and you will be able to run your project in it.
+
+>**NOTE 1:** As LPS doesn't have AVX-512, it was necessary to install an specific version of tensorflow. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries for compatibility.
+
+>**NOTE 2:** The tensorflow-2.8.0rc0-cp38-cp38-linux_x86_64.whl wheel is necessary to build the Dockerfile. It is located in the project Google Drive on "BRICS - TB Latente/Reproducibility" folder.
 
 ## Mlflow
 
