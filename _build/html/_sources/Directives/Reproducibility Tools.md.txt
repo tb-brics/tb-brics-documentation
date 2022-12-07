@@ -33,18 +33,18 @@ The steps for running singularity container in LPS are:
 ```
 make push
 ``` 
-in the machine you have build your docker image. It will push it to your Docker Hub. It is necessary to change the "DOCKER_HUB_USERNAME" variable, presented in the Makefile, to your docker hub username.
+in the machine you have build your docker image (outside LPS). It will push it to your Docker Hub. It is necessary to change the "DOCKER_HUB_USERNAME" variable, presented in the Makefile, to your docker hub username.
 
 2º - Once pushed, access LPS and rename "Makefile" file to anything else, and rename "Makefile LPS" file to "Makefile". Now run 
 ```
 make pull-start 
 ```
 It will build and run a singularity image from the docker image in your Docker Hub.
-After that you will be inside your container and you will be able to run your project in it.
+After that you will be inside your container and you will be able to run your project on it.
 
->**NOTE 1:** As LPS doesn't have AVX-512, it was necessary to install an specific version of tensorflow. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries for compatibility.
+>**NOTE:** As LPS doesn't have AVX-512, it was necessary to install an specific version of tensorflow. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries for compatibility.
 
->**NOTE 2:** The tensorflow-2.8.0rc0-cp38-cp38-linux_x86_64.whl wheel is necessary to build the Dockerfile. It is located in the project Google Drive on "BRICS - TB Latente/Reproducibility" folder.
+>**Important !!!** The tensorflow-2.8.0rc0-cp38-cp38-linux_x86_64.whl wheel is necessary to build the Dockerfile. It is located in the project Google Drive on "BRICS - TB Latente/Reproducibility" path.
 
 ## Mlflow
 
@@ -74,13 +74,13 @@ luigi.build([
 # Ending experiment
 mlflow.end_run()
 ``` 
-The firsts 3 lines will start the experiment and enables logging in mlflow. For logging files, images, parameters, metrics and models, use this functions on your code (inside luigi pipeline):
+The firsts 3 lines will start the experiment and enables logging in mlflow. For logging files, images, parameters, metrics and models, use the functions below on your code (inside luigi pipeline):
 
 ```python
 mlflow.log_artifact() # Log general files and images
 mlflow.log_params() # Log all params
 mlflow.log_param() # Log specific param
-mlflow.sklearn.log_model() # Log sklearn model (can log from other libraries too)
+mlflow.sklearn.log_model() # Log sklearn model (can log from others libraries too)
 mlflow.log_metric() # Log metric value (accuracy, error, ...)
 ```
 The experiment will be logged on https://sandbox.lps.ufrj.br/.

@@ -120,18 +120,18 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">push</span>
 </pre></div>
 </div>
-<p>in the machine you have build your docker image. It will push it to your Docker Hub. It is necessary to change the “DOCKER_HUB_USERNAME” variable, presented in the Makefile, to your docker hub username.</p>
+<p>in the machine you have build your docker image (outside LPS). It will push it to your Docker Hub. It is necessary to change the “DOCKER_HUB_USERNAME” variable, presented in the Makefile, to your docker hub username.</p>
 <p>2º - Once pushed, access LPS and rename “Makefile” file to anything else, and rename “Makefile LPS” file to “Makefile”. Now run</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">pull</span><span class="o">-</span><span class="n">start</span> 
 </pre></div>
 </div>
 <p>It will build and run a singularity image from the docker image in your Docker Hub.
-After that you will be inside your container and you will be able to run your project in it.</p>
+After that you will be inside your container and you will be able to run your project on it.</p>
 <blockquote>
-<div><p><strong>NOTE 1:</strong> As LPS doesn’t have AVX-512, it was necessary to install an specific version of tensorflow. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries for compatibility.</p>
+<div><p><strong>NOTE:</strong> As LPS doesn’t have AVX-512, it was necessary to install an specific version of tensorflow. So, this image is out of trouble for this set of libraries, and ready to work with them. But, it is necessary to pay attention when install other libraries for compatibility.</p>
 </div></blockquote>
 <blockquote>
-<div><p><strong>NOTE 2:</strong> The tensorflow-2.8.0rc0-cp38-cp38-linux_x86_64.whl wheel is necessary to build the Dockerfile. It is located in the project Google Drive on “BRICS - TB Latente/Reproducibility” folder.</p>
+<div><p><strong>Important !!!</strong> The tensorflow-2.8.0rc0-cp38-cp38-linux_x86_64.whl wheel is necessary to build the Dockerfile. It is located in the project Google Drive on “BRICS - TB Latente/Reproducibility” path.</p>
 </div></blockquote>
 </section>
 <section id="mlflow">
@@ -159,11 +159,11 @@ After that you will be inside your container and you will be able to run your pr
 <span class="n">mlflow</span><span class="o">.</span><span class="n">end_run</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The firsts 3 lines will start the experiment and enables logging in mlflow. For logging files, images, parameters, metrics and models, use this functions on your code (inside luigi pipeline):</p>
+<p>The firsts 3 lines will start the experiment and enables logging in mlflow. For logging files, images, parameters, metrics and models, use the functions below on your code (inside luigi pipeline):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mlflow</span><span class="o">.</span><span class="n">log_artifact</span><span class="p">()</span> <span class="c1"># Log general files and images</span>
 <span class="n">mlflow</span><span class="o">.</span><span class="n">log_params</span><span class="p">()</span> <span class="c1"># Log all params</span>
 <span class="n">mlflow</span><span class="o">.</span><span class="n">log_param</span><span class="p">()</span> <span class="c1"># Log specific param</span>
-<span class="n">mlflow</span><span class="o">.</span><span class="n">sklearn</span><span class="o">.</span><span class="n">log_model</span><span class="p">()</span> <span class="c1"># Log sklearn model (can log from other libraries too)</span>
+<span class="n">mlflow</span><span class="o">.</span><span class="n">sklearn</span><span class="o">.</span><span class="n">log_model</span><span class="p">()</span> <span class="c1"># Log sklearn model (can log from others libraries too)</span>
 <span class="n">mlflow</span><span class="o">.</span><span class="n">log_metric</span><span class="p">()</span> <span class="c1"># Log metric value (accuracy, error, ...)</span>
 </pre></div>
 </div>
